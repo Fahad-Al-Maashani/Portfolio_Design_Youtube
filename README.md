@@ -3,7 +3,7 @@
 ## English
 
 ### Overview
-This repository contains a modern single-page portfolio for Fahad Al Maashani. The layout is optimized for screening by recruiters: clear hero messaging, highlighted experience, scannable project summaries, and quick contact options. The stack is intentionally lightweight (HTML, CSS, vanilla JS) so the page can be hosted on any static host without build tooling.
+This repository contains a modern single-page portfolio for anyone who want design his own portfolio website. The layout is optimized for screening by recruiters: clear hero messaging, highlighted experience, scannable project summaries, and quick contact options. The stack is intentionally lightweight (HTML, CSS, vanilla JS) so the page can be hosted on any static host without build tooling.
 
 ### Features
 - Sticky header with responsive navigation and CTA buttons

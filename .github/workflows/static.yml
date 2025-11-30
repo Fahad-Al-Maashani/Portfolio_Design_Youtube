@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'src'
+          path: 'Fahad-Al-Maashani/Portfolio_Design_Youtube/src'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

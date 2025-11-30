@@ -1,77 +1,105 @@
-# Personal Portfolio Website · الموقع الشخصي للملف المهني
+# Personal Portfolio Template · قالب الملف المهني الشخصي
 
 ## English
 
-### Overview
-This repository contains a modern single-page portfolio for anyone who want design his own portfolio website. The layout is optimized for screening by recruiters: clear hero messaging, highlighted experience, scannable project summaries, and quick contact options. The stack is intentionally lightweight (HTML, CSS, vanilla JS) so the page can be hosted on any static host without build tooling.
+### Purpose
+A modern single-page portfolio anyone can adapt in minutes. No build tools or frameworks—just edit the highlighted spots and publish the three files. Recruiters see the same structure: hero, skills, projects, experience, testimonials, and contact.
 
-### Features
-- Sticky header with responsive navigation and CTA buttons
-- Hero section with impactful headline, stats, and availability card
-- About, Skills, Projects, Experience, Testimonials, and Contact sections arranged for easy scanning
-- Modern styling with gradients, glassmorphism cards, and accessibility-conscious typography
-- Mobile menu toggle, current year injection, and simulated contact-form submission feedback
+### What's Inside
+- `index.html` – semantic layout with EDITABLE comments around every piece of copy.
+- `styles.css` – design tokens and section styles with clearly marked variables.
+- `script.js` – tiny enhancements (mobile menu, current year, contact form toast) with hints on what to change.
 
-### Getting Started
-1. Clone or download this repository.
-2. Open `index.html` in your browser to preview locally.
-3. (Optional) Use a lightweight HTTP server for better caching and routing, e.g. `npx serve .`.
+### Quick Start
+1. Download or clone this repo.
+2. Double-click `index.html` to preview locally.
+3. Ready to share? Upload the three files to GitHub Pages, Netlify, Vercel, etc.
 
-### Customization Tips
-- Update hero text, metrics, and CTA email in `index.html`.
-- Replace project copy inside the `#projects` section with real case studies.
-- Adjust brand colors, gradients, or typography in `styles.css` (top-level CSS variables under `:root`).
-- Modify the form submission behavior or integrate with a real backend by editing `script.js`.
+### Customize Without Coding
+Every customizable zone is labeled `EDITABLE`. Use your editor’s “Find” feature to jump between them.
 
-### File Structure
+#### 1. Update Text & Links (`index.html`)
+- **Logo + name:** replace the initials right under `<!-- EDITABLE: Replace name/initial below -->`.
+- **Navigation + call-to-action email:** edit the nav links and `mailto` address inside the header block.
+- **Hero:** swap in your role, headline, paragraph, stats, CTA buttons, and the “Why hire me?” list.
+- **About / Skills / Projects / Experience / Testimonials / Contact:** each section starts with an `<!-- EDITABLE SECTION ... -->` note. Replace the copy, bullet lists, dates, and testimonials with your own story.
+- **Footer:** change social URLs and the contact email inside the `footer-links` comment.
+
+#### 2. Change Colors & Style Tokens (`styles.css`)
+- At the top you’ll see `/* EDITABLE: adjust colors, radii, and layout tokens here */` followed by variables like `--bg`, `--accent`, `--radius`.
+- Update these values to switch the palette, spacing, or corner rounding without touching the rest of the CSS.
+- You can also tweak section-specific rules (e.g., `.hero`, `.projects`) if you feel comfortable—look for intuitive class names.
+
+#### 3. Adjust Behavior (`script.js`)
+- The first line reminds you this file is optional. Leave it as-is if you only need the static template.
+- Change the alert text inside the contact-form handler or replace it with your own service (Formspree, Netlify Forms, etc.).
+- Customize the mobile nav toggle behavior if you want different interactions—code is only ~30 lines.
+
+### File Map
 ```
 webdesign/
-├── index.html   # Main page markup with all sections
-├── styles.css   # Global styles, components, and responsive rules
-└── script.js    # Mobile menu toggle + demo contact form handler
+├── index.html   # EDITABLE comments mark every text block
+├── styles.css   # Theme variables + layout rules (top comment = edit zone)
+└── script.js    # Menu toggle + demo contact form alert (with EDITABLE note)
 ```
 
 ### Deployment
-Upload the three files to any static host (GitHub Pages, Netlify Drop, Vercel, etc.). Ensure all assets stay in the same directory so relative paths remain valid. No environment variables or build steps are required.
+- **GitHub Pages:** push to a repo and enable Pages (root directory). Files load instantly.
+- **Netlify / Vercel:** drag-and-drop the folder or connect your repo—no build command required.
+- **Any static host:** keep all three files in the same folder so the relative paths stay valid.
 
-### Contact
-For questions or collaboration requests, edit the email links in the hero and footer to point to your preferred inbox.
+### Need Help?
+Open an issue or fork the template and tailor it. Remember to replace every `mailto:` address with your inbox so leads reach you.
 
 ---
 
 ## العربية
 
-### نظرة عامة
-يحتوي هذا المستودع على موقع شخصي حديث من صفحة واحدة لجميع المصممين. تم تصميم البنية لتناسب متطلبات التقديم للوظائف: رسالة قوية في الجزء العلوي، إبراز الخبرات، ملخصات مختصرة للمشاريع، ووسائل تواصل واضحة. تم الاعتماد على HTML وCSS وJavaScript فقط ليكون النشر بسيطًا على أي منصة استضافة ثابتة.
+### الهدف
+قالب موقع شخصي حديث من صفحة واحدة يمكن لأي شخص تعديله خلال دقائق. لا توجد أدوات بناء أو أطر عمل؛ كل ما عليك هو تعديل المواقع المعلّمة ثم رفع الملفات الثلاثة. الهيكل ثابت ليسهل على مسؤولي التوظيف قراءة أقسام البطل، المهارات، المشاريع، الخبرة، التوصيات، والتواصل.
 
-### المزايا
-- شريط علوي ثابت مع قائمة تنقل تستجيب لأحجام الشاشات المختلفة وأزرار دعوة لاتخاذ إجراء
-- قسم رئيسي يضم عنوانًا لافتًا، إحصائيات الخبرة، وبطاقة توضح التوافر المهني
-- أقسام عن السيرة الذاتية، المهارات، المشاريع، الخبرات، الشهادات، والتواصل مرتبة بطريقة تسهّل قراءتها
-- تصميم حديث يعتمد على التدرجات اللونية والبطاقات الشفافة ومراعاة متطلبات الوصول في الخطوط والألوان
-- تفاعل بسيط عبر JavaScript لفتح القائمة على الأجهزة الصغيرة، وتحديث سنة الحقوق تلقائيًا، ورسالة تأكيد لنموذج التواصل
+### محتويات القالب
+- `index.html` – هيكل HTML مع تعليقات `EDITABLE` حول كل نص قابل للتعديل.
+- `styles.css` – متغيرات التصميم وقواعد الأقسام مع إشارة واضحة للجزء القابل للتخصيص.
+- `script.js` – تحسينات بسيطة (قائمة الجوال، سنة الحقوق، تنبيه نموذج التواصل) مع إرشادات للتعديل.
 
-### كيفية البدء
-1. قم باستنساخ المستودع أو تنزيله.
-2. افتح ملف `index.html` مباشرة في المتصفح لمعاينة الموقع.
-3. (اختياري) استخدم خادمًا بسيطًا مثل `npx serve .` لتحسين التخزين المؤقت والتصفح المحلي.
+### البدء السريع
+1. حمّل المستودع أو استنسخه.
+2. افتح `index.html` في المتصفح لمعاينة فورية.
+3. جاهز للنشر؟ ارفع الملفات الثلاثة إلى GitHub Pages أو Netlify أو Vercel أو أي استضافة ثابتة.
 
-### تخصيص الموقع
-- حدّث نصوص قسم البطل، الأرقام، وروابط البريد الإلكتروني داخل `index.html`.
-- استبدل وصف المشاريع في قسم `#projects` بدراسات حالة حقيقية.
-- عدّل ألوان الهوية أو التدرجات أو الخطوط من خلال المتغيرات المعرفة في أعلى `styles.css`.
-- يمكنك تعديل سلوك نموذج التواصل أو ربطه بواجهة خلفية حقيقية بتحديث ملف `script.js`.
+### تخصيص سهل بدون برمجة
+كل منطقة مخصصة تم وسمها بكلمة `EDITABLE`. استخدم وظيفة البحث في المحرر للانتقال بينها بسرعة.
 
-### بنية الملفات
+#### 1. تحديث النصوص والروابط (`index.html`)
+- **الشعار والاسم:** عدّل الحروف تحت التعليق `<!-- EDITABLE: Replace name/initial below -->`.
+- **القائمة العلوية + البريد:** عدّل روابط الأقسام ورابط البريد في الجزء الخاص بالرأس.
+- **قسم البطل:** غيّر المسمى الوظيفي، العنوان، الفقرة، الأرقام، الأزرار، وقائمة “لماذا توظفني؟”.
+- **الأقسام الأخرى (التعريف، المهارات، المشاريع، الخبرة، الآراء، التواصل):** يبدأ كل قسم بتعليق `<!-- EDITABLE SECTION ... -->`، فقط استبدل النصوص والقوائم بالتفاصيل الخاصة بك.
+- **التذييل:** حدّث روابط الشبكات الاجتماعية وعنوان البريد داخل تعليق `footer-links`.
+
+#### 2. تغيير الألوان وعناصر الهوية (`styles.css`)
+- في الأعلى ستجد التعليق `/* EDITABLE: adjust colors, radii, and layout tokens here */` متبوعًا بمتغيرات مثل `--bg` و`--accent`.
+- عدّل هذه القيم لتغيير لوحة الألوان أو المسافات أو انحناء الزوايا دون الحاجة للمساس بباقي الأنماط.
+- يمكن تعديل قواعد الأقسام (مثل `.hero` أو `.projects`) إذا رغبت، فجميع الأسماء واضحة.
+
+#### 3. تعديل السلوك (`script.js`)
+- السطر الأول يذكّرك أن هذا الملف اختياري؛ اتركه كما هو إن لم تكن بحاجة لتعديلات.
+- عدّل نص التنبيه داخل معالج نموذج التواصل أو استبدله بتكامل مع خدمة مثل Formspree أو Netlify Forms.
+- لديك حرية تعديل طريقة عمل قائمة الجوال إن أردت تفاعلًا مختلفًا—الكود لا يتجاوز 30 سطرًا تقريبًا.
+
+### خريطة الملفات
 ```
 webdesign/
-├── index.html   # الصفحة الرئيسية وجميع الأقسام
-├── styles.css   # أنماط التصميم والقواعد المتجاوبة
-└── script.js    # تحكم القائمة على الجوال ومعالجة نموذج التواصل
+├── index.html   # تعليقات EDITABLE توضح كل جزء قابل للتغيير
+├── styles.css   # متغيرات الهوية وقواعد التخطيط (قسم التعديل في الأعلى)
+└── script.js    # التحكم بقائمة الجوال وتنبيه النموذج (مع تعليق EDITABLE)
 ```
 
 ### النشر
-يمكن رفع الملفات الثلاثة إلى أي خدمة استضافة مواقع ثابتة مثل GitHub Pages أو Netlify أو Vercel. تأكد من بقاء الملفات معًا في نفس المسار للحفاظ على الروابط النسبية دون تعديل. لا توجد حاجة لأي متغيرات بيئة أو عملية بناء.
+- **GitHub Pages:** ادفع الملفات إلى مستودع ثم فعّل الخدمة (المجلد الجذر).
+- **Netlify / Vercel:** اسحب المجلد وأفلته أو اربطه بالمستودع—لا حاجة لأوامر بناء.
+- **أي استضافة ثابتة:** احتفظ بالملفات الثلاثة معًا في نفس المجلد للحفاظ على المسارات النسبية.
 
-### التواصل
-قم بتعديل روابط البريد الإلكتروني داخل القسم الرئيسي والتذييل لتوجيه الرسائل إلى البريد الذي تفضله.
+### تحتاج مساعدة؟
+افتح تذكرة أو قم بعمل Fork وخصص القالب كما تريد. لا تنسَ استبدال كل عنوان `mailto:` ببريدك حتى تصلك طلبات العمل مباشرة.
